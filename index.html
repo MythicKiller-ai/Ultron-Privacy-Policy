@@ -3,179 +3,113 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ultron™ Privacy Policy</title>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<title>Ultron™ - Terms of Service</title>
 <style>
-    /* Reset */
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-
-    body {
-        font-family: 'Roboto', sans-serif;
-        background: #0b0b17;
-        color: #e0e0e0;
-        line-height: 1.6;
-    }
-
-    a { color: #00ffff; text-decoration: none; transition: 0.2s; }
-    a:hover { text-decoration: underline; color: #ff00ff; }
-
-    /* Header */
-    header {
-        background: linear-gradient(90deg, #0f0f1f, #1c1c2e);
-        padding: 40px 20px;
-        text-align: center;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.5);
-    }
-    header h1 {
-        font-size: 3rem;
-        background: linear-gradient(90deg, #00ffff, #ff00ff);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        font-weight: 900;
-    }
-    header p {
-        color: #a0a0a0;
-        font-size: 1.1rem;
-        margin-top: 10px;
-    }
-
-    /* Container */
-    .container {
-        max-width: 1000px;
-        margin: 40px auto;
-        padding: 0 20px;
-    }
-
-    /* Section Cards */
-    .card {
-        background: #1c1c2e;
-        padding: 25px 30px;
-        margin-bottom: 25px;
-        border-radius: 12px;
-        box-shadow: 0 8px 20px rgba(0,0,0,0.5);
-        transition: 0.3s;
-    }
-    .card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 12px 25px rgba(0,0,0,0.7);
-    }
-
-    h2 {
-        font-size: 1.8rem;
-        color: #00ffff;
-        margin-bottom: 15px;
-        position: relative;
-    }
-    h2::before {
-        content: '';
-        width: 50px;
-        height: 3px;
-        background: linear-gradient(90deg, #00ffff, #ff00ff);
-        position: absolute;
-        left: 0;
-        bottom: -5px;
-        border-radius: 3px;
-    }
-
-    p, ul { margin-bottom: 15px; }
-    ul { margin-left: 20px; }
-    li { margin-bottom: 8px; }
-
-    /* Glow text highlight */
-    .highlight {
-        color: #00ffff;
-        font-weight: bold;
-    }
-
-    /* Footer */
-    footer {
-        text-align: center;
-        padding: 25px 0;
-        background: #0f0f1f;
-        border-top: 1px solid #222;
-        color: #777;
-        font-size: 0.95rem;
-        margin-top: 40px;
-    }
-
-    /* Responsive */
-    @media(max-width:768px){
-        header h1 { font-size: 2.2rem; }
-        .card { padding: 20px; }
-        h2 { font-size: 1.5rem; }
-    }
+  /* Reset and basic styles */
+  * {margin: 0; padding: 0; box-sizing: border-box;}
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #0f0f1a;
+    color: #e0e0e0;
+    line-height: 1.6;
+  }
+  header {
+    text-align: center;
+    padding: 50px 20px 30px;
+    background: linear-gradient(135deg, #0ff, #ff0, #f0f);
+    background-size: 600% 600%;
+    animation: gradientBG 15s ease infinite;
+    color: #fff;
+    text-shadow: 0 0 10px #0ff, 0 0 20px #ff0, 0 0 30px #f0f;
+    font-size: 3em;
+    font-weight: bold;
+  }
+  @keyframes gradientBG {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+  }
+  main {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background: rgba(255,255,255,0.03);
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(0,255,255,0.2);
+    backdrop-filter: blur(10px);
+  }
+  h2 {
+    margin-top: 30px;
+    color: #0ff;
+    text-shadow: 0 0 5px #0ff;
+  }
+  p, li {
+    margin: 15px 0;
+  }
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  li::before {
+    content: "• ";
+    color: #f0f;
+  }
+  a {
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #fff;
+    background: linear-gradient(90deg, #0ff, #f0f, #ff0);
+    padding: 12px 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #0ff, 0 0 20px #f0f, 0 0 30px #ff0;
+    transition: all 0.3s ease;
+  }
+  a:hover {
+    transform: scale(1.05);
+    text-shadow: 0 0 10px #fff;
+  }
+  footer {
+    text-align: center;
+    margin: 50px 0 20px;
+    font-size: 0.9em;
+    color: #888;
+  }
 </style>
 </head>
 <body>
 
-<header>
-    <h1>Ultron™ Privacy Policy</h1>
-    <p>Effective Date: 18 December 2025</p>
-</header>
+<header>Ultron™ - Terms of Service</header>
 
-<div class="container">
+<main>
+  <h2>Welcome to Ultron™</h2>
+  <p>Thank you for using Ultron™, your ultimate Discord bot companion packed with tons of features. Before interacting with Ultron™, please read these Terms of Service carefully.</p>
 
-    <div class="card">
-        <h2>1. Introduction</h2>
-        <p>Welcome to <span class="highlight">Ultron™</span>. We respect your privacy and are committed to protecting your data when you use our Discord bot.</p>
-    </div>
+  <h2>1. Acceptance of Terms</h2>
+  <p>By using Ultron™, you agree to comply with these terms. If you do not agree, please do not use the bot.</p>
 
-    <div class="card">
-        <h2>2. Data Collection</h2>
-        <p>Ultron™ may collect the following data to provide its services:</p>
-        <ul>
-            <li>Discord user ID and username</li>
-            <li>Server ID and channel information</li>
-            <li>Message content (for AFK, logging, economy, giveaways)</li>
-            <li>Bot usage statistics</li>
-        </ul>
-    </div>
+  <h2>2. Features & Usage</h2>
+  <ul>
+    <li>Commands and features may be updated or removed at any time.</li>
+    <li>You must not misuse or abuse the bot.</li>
+    <li>Respect Discord's Terms of Service while using Ultron™.</li>
+  </ul>
 
-    <div class="card">
-        <h2>3. Data Usage</h2>
-        <ul>
-            <li>Provide bot commands and features</li>
-            <li>Server moderation and logging</li>
-            <li>Economy and game tracking</li>
-            <li>Improve bot performance and features</li>
-        </ul>
-    </div>
+  <h2>3. Privacy</h2>
+  <p>Ultron™ may collect minimal data required to operate features effectively. Your data will not be shared with third parties without consent.</p>
 
-    <div class="card">
-        <h2>4. Data Sharing</h2>
-        <p>Ultron™ does not sell your data. Limited sharing may occur for commands like NQN, mass unban logs, or server logs as required for bot functionality.</p>
-    </div>
+  <h2>4. Liability</h2>
+  <p>Ultron™ is provided "as-is". The creators are not responsible for any damage, loss, or inconvenience caused by using the bot.</p>
 
-    <div class="card">
-        <h2>5. Data Security</h2>
-        <p>We implement reasonable measures to protect your data. Users are responsible for managing permissions and sharing within their servers.</p>
-    </div>
-
-    <div class="card">
-        <h2>6. User Control</h2>
-        <p>You may:</p>
-        <ul>
-            <li>Opt out of certain features</li>
-            <li>Request deletion of server data by contacting the bot developer</li>
-        </ul>
-    </div>
-
-    <div class="card">
-        <h2>7. Updates</h2>
-        <p>This Privacy Policy may be updated periodically. Continued use of the bot constitutes acceptance of changes.</p>
-    </div>
-
-    <div class="card">
-        <h2>8. Contact</h2>
-        <p>Questions? Contact the Ultron™ developer via Discord or the official support server.</p>
-    </div>
-
-</div>
+  <h2>5. Support</h2>
+  <p>If you need help or want to report a bug, join our support server:</p>
+  <a href="https://discord.gg/XRxzpEvZxd" target="_blank">Click here to join the Support Server</a>
+</main>
 
 <footer>
-    &copy; 2025 Ultron™ | All Rights Reserved
+  &copy; 2025 Ultron™. All rights reserved.
 </footer>
 
 </body>
 </html>
+
