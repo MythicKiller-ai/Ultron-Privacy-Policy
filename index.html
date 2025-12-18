@@ -5,54 +5,105 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ultron™ Privacy Policy</title>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <style>
+    /* Reset */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
     body {
         font-family: 'Roboto', sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #0a0a0f;
+        background: #0b0b17;
         color: #e0e0e0;
         line-height: 1.6;
     }
-    a { color: #00bfff; text-decoration: none; }
-    a:hover { text-decoration: underline; }
+
+    a { color: #00ffff; text-decoration: none; transition: 0.2s; }
+    a:hover { text-decoration: underline; color: #ff00ff; }
+
+    /* Header */
     header {
-        background: linear-gradient(90deg, #0f0f1f, #1a1a2e);
-        padding: 30px 0;
+        background: linear-gradient(90deg, #0f0f1f, #1c1c2e);
+        padding: 40px 20px;
         text-align: center;
-        box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+        box-shadow: 0 4px 10px rgba(0,0,0,0.5);
     }
     header h1 {
-        font-size: 2.5rem;
-        color: #00bfff;
-        margin: 0;
+        font-size: 3rem;
+        background: linear-gradient(90deg, #00ffff, #ff00ff);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: 900;
     }
     header p {
-        font-size: 1.1rem;
         color: #a0a0a0;
-        margin-top: 5px;
+        font-size: 1.1rem;
+        margin-top: 10px;
     }
+
+    /* Container */
     .container {
-        max-width: 900px;
-        margin: 30px auto;
+        max-width: 1000px;
+        margin: 40px auto;
         padding: 0 20px;
     }
-    h2 {
-        color: #00d4ff;
-        border-left: 4px solid #00bfff;
-        padding-left: 10px;
-        margin-top: 40px;
-        margin-bottom: 15px;
+
+    /* Section Cards */
+    .card {
+        background: #1c1c2e;
+        padding: 25px 30px;
+        margin-bottom: 25px;
+        border-radius: 12px;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+        transition: 0.3s;
     }
-    p { margin-bottom: 15px; }
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 25px rgba(0,0,0,0.7);
+    }
+
+    h2 {
+        font-size: 1.8rem;
+        color: #00ffff;
+        margin-bottom: 15px;
+        position: relative;
+    }
+    h2::before {
+        content: '';
+        width: 50px;
+        height: 3px;
+        background: linear-gradient(90deg, #00ffff, #ff00ff);
+        position: absolute;
+        left: 0;
+        bottom: -5px;
+        border-radius: 3px;
+    }
+
+    p, ul { margin-bottom: 15px; }
     ul { margin-left: 20px; }
+    li { margin-bottom: 8px; }
+
+    /* Glow text highlight */
+    .highlight {
+        color: #00ffff;
+        font-weight: bold;
+    }
+
+    /* Footer */
     footer {
         text-align: center;
-        padding: 20px 0;
+        padding: 25px 0;
         background: #0f0f1f;
         border-top: 1px solid #222;
         color: #777;
-        margin-top: 50px;
+        font-size: 0.95rem;
+        margin-top: 40px;
+    }
+
+    /* Responsive */
+    @media(max-width:768px){
+        header h1 { font-size: 2.2rem; }
+        .card { padding: 20px; }
+        h2 { font-size: 1.5rem; }
     }
 </style>
 </head>
@@ -65,61 +116,60 @@
 
 <div class="container">
 
-    <section>
+    <div class="card">
         <h2>1. Introduction</h2>
-        <p>Ultron™ values your privacy. This Privacy Policy explains how we collect, use, and protect information when you interact with the Ultron™ Discord bot.</p>
-    </section>
+        <p>Welcome to <span class="highlight">Ultron™</span>. We respect your privacy and are committed to protecting your data when you use our Discord bot.</p>
+    </div>
 
-    <section>
+    <div class="card">
         <h2>2. Data Collection</h2>
-        <p>Ultron™ may collect the following information to provide its services:</p>
+        <p>Ultron™ may collect the following data to provide its services:</p>
         <ul>
-            <li>Discord user ID and username for commands and moderation</li>
-            <li>Server ID and channel information to manage settings and logs</li>
-            <li>Messages content for features like AFK, economy, giveaways, and logging (if enabled)</li>
-            <li>Bot usage statistics for analytics and improvements</li>
+            <li>Discord user ID and username</li>
+            <li>Server ID and channel information</li>
+            <li>Message content (for AFK, logging, economy, giveaways)</li>
+            <li>Bot usage statistics</li>
         </ul>
-    </section>
+    </div>
 
-    <section>
+    <div class="card">
         <h2>3. Data Usage</h2>
-        <p>The data collected is used for:</p>
         <ul>
-            <li>Providing bot commands and features</li>
+            <li>Provide bot commands and features</li>
             <li>Server moderation and logging</li>
-            <li>Tracking user activity for economy, games, and statistics</li>
-            <li>Improving the bot’s performance and features</li>
+            <li>Economy and game tracking</li>
+            <li>Improve bot performance and features</li>
         </ul>
-    </section>
+    </div>
 
-    <section>
+    <div class="card">
         <h2>4. Data Sharing</h2>
-        <p>Ultron™ does not sell or share your personal information with third parties outside the scope of bot functionality. Some limited data may be shared with Discord servers if required for commands or features (like NQN or mass unban logs).</p>
-    </section>
+        <p>Ultron™ does not sell your data. Limited sharing may occur for commands like NQN, mass unban logs, or server logs as required for bot functionality.</p>
+    </div>
 
-    <section>
+    <div class="card">
         <h2>5. Data Security</h2>
-        <p>We implement reasonable measures to protect your information. However, we cannot guarantee absolute security. Users are responsible for server permissions and data shared within Discord servers.</p>
-    </section>
+        <p>We implement reasonable measures to protect your data. Users are responsible for managing permissions and sharing within their servers.</p>
+    </div>
 
-    <section>
+    <div class="card">
         <h2>6. User Control</h2>
-        <p>You can control the data processed by Ultron™:</p>
+        <p>You may:</p>
         <ul>
-            <li>Opt out of certain bot features like logging or economy commands</li>
-            <li>Request deletion of your server data by contacting the bot developer</li>
+            <li>Opt out of certain features</li>
+            <li>Request deletion of server data by contacting the bot developer</li>
         </ul>
-    </section>
+    </div>
 
-    <section>
-        <h2>7. Updates to This Policy</h2>
-        <p>Ultron™ may update this Privacy Policy periodically. Continued use of the bot indicates acceptance of the updated terms. Users should check this page for the latest version.</p>
-    </section>
+    <div class="card">
+        <h2>7. Updates</h2>
+        <p>This Privacy Policy may be updated periodically. Continued use of the bot constitutes acceptance of changes.</p>
+    </div>
 
-    <section>
+    <div class="card">
         <h2>8. Contact</h2>
-        <p>If you have questions regarding this Privacy Policy, please contact the bot developer through Discord or the official support server.</p>
-    </section>
+        <p>Questions? Contact the Ultron™ developer via Discord or the official support server.</p>
+    </div>
 
 </div>
 
@@ -129,4 +179,3 @@
 
 </body>
 </html>
-
