@@ -1,115 +1,441 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ultron™ - Terms of Service</title>
-<style>
-  /* Reset and basic styles */
-  * {margin: 0; padding: 0; box-sizing: border-box;}
-  body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #0f0f1a;
-    color: #e0e0e0;
-    line-height: 1.6;
-  }
-  header {
-    text-align: center;
-    padding: 50px 20px 30px;
-    background: linear-gradient(135deg, #0ff, #ff0, #f0f);
-    background-size: 600% 600%;
-    animation: gradientBG 15s ease infinite;
-    color: #fff;
-    text-shadow: 0 0 10px #0ff, 0 0 20px #ff0, 0 0 30px #f0f;
-    font-size: 3em;
-    font-weight: bold;
-  }
-  @keyframes gradientBG {
-    0% {background-position: 0% 50%;}
-    50% {background-position: 100% 50%;}
-    100% {background-position: 0% 50%;}
-  }
-  main {
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 20px;
-    background: rgba(255,255,255,0.03);
-    border-radius: 15px;
-    box-shadow: 0 0 30px rgba(0,255,255,0.2);
-    backdrop-filter: blur(10px);
-  }
-  h2 {
-    margin-top: 30px;
-    color: #0ff;
-    text-shadow: 0 0 5px #0ff;
-  }
-  p, li {
-    margin: 15px 0;
-  }
-  ul {
-    list-style: none;
-    padding-left: 0;
-  }
-  li::before {
-    content: "• ";
-    color: #f0f;
-  }
-  a {
-    display: inline-block;
-    margin-top: 20px;
-    text-decoration: none;
-    color: #fff;
-    background: linear-gradient(90deg, #0ff, #f0f, #ff0);
-    padding: 12px 25px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px #0ff, 0 0 20px #f0f, 0 0 30px #ff0;
-    transition: all 0.3s ease;
-  }
-  a:hover {
-    transform: scale(1.05);
-    text-shadow: 0 0 10px #fff;
-  }
-  footer {
-    text-align: center;
-    margin: 50px 0 20px;
-    font-size: 0.9em;
-    color: #888;
-  }
-</style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ultron™ – Terms of Service</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #07070d;
+            color: #eaeef2;
+            line-height: 1.7;
+        }
+
+        a {
+            color: #00c8ff;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        a:hover {
+            color: #66dcff;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* ---------- COPYRIGHT BANNER (sticky popup) ---------- */
+        #copyrightBanner {
+            position: sticky;
+            top: 0;
+            z-index: 1001;
+            background: #0b0b1a;
+            border-bottom: 2px solid #00bfff;
+            padding: 10px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(4px);
+            transition: all 0.2s ease;
+        }
+
+        #copyrightBanner .banner-text {
+            color: #b0c4de;
+            font-size: 0.9rem;
+            font-weight: 500;
+            letter-spacing: 0.3px;
+        }
+
+        #copyrightBanner .banner-text strong {
+            color: #00d4ff;
+        }
+
+        #copyrightBanner .close-btn {
+            background: transparent;
+            border: none;
+            color: #8899b0;
+            font-size: 1.6rem;
+            line-height: 1;
+            cursor: pointer;
+            padding: 0 6px;
+            transition: color 0.2s, transform 0.2s;
+        }
+        #copyrightBanner .close-btn:hover {
+            color: #ffffff;
+            transform: rotate(90deg);
+        }
+
+        /* ---------- NAVBAR ---------- */
+        .navbar {
+            background: #0e0e1a;
+            border-bottom: 1px solid #1e1e32;
+            padding: 16px 0;
+            backdrop-filter: blur(6px);
+        }
+
+        .navbar .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .brand img {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            border: 2px solid #00bfff;
+            object-fit: cover;
+        }
+
+        .brand h1 {
+            font-size: 1.7rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #00bfff, #0080ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px 24px;
+            list-style: none;
+            font-weight: 500;
+        }
+
+        .nav-links a {
+            color: #b0b8c5;
+            font-size: 1rem;
+            padding: 4px 0;
+            border-bottom: 2px solid transparent;
+            transition: 0.2s;
+        }
+        .nav-links a:hover {
+            color: #ffffff;
+            border-bottom-color: #00bfff;
+        }
+
+        /* ---------- HERO / HEADER ---------- */
+        .terms-header {
+            text-align: center;
+            padding: 50px 20px 30px;
+            background: radial-gradient(circle at 20% 30%, #10102a, #07070d 70%);
+            border-bottom: 1px solid #18182a;
+        }
+
+        .terms-header h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #00ccff, #0066ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .terms-header p {
+            color: #8899b0;
+            font-size: 1.1rem;
+            margin-top: 8px;
+        }
+
+        /* ---------- MAIN CONTENT ---------- */
+        .terms-content {
+            padding: 40px 0 60px;
+        }
+
+        .terms-content h2 {
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: #00d4ff;
+            margin: 36px 0 12px;
+            border-left: 4px solid #00bfff;
+            padding-left: 16px;
+        }
+
+        .terms-content p {
+            margin: 16px 0;
+            color: #bcc6d6;
+        }
+
+        .terms-content ul {
+            list-style: none;
+            padding-left: 0;
+            margin: 16px 0;
+        }
+
+        .terms-content ul li {
+            padding: 6px 0 6px 28px;
+            position: relative;
+            color: #bcc6d6;
+        }
+
+        .terms-content ul li::before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: #00bfff;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #00bfff;
+            color: #0a0a12;
+            font-weight: 600;
+            padding: 12px 32px;
+            border-radius: 40px;
+            font-size: 1rem;
+            border: none;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.1s, box-shadow 0.2s;
+            text-align: center;
+        }
+
+        .btn:hover {
+            background: #33ccff;
+            color: #0a0a12;
+            transform: scale(1.02);
+            box-shadow: 0 4px 16px rgba(0, 191, 255, 0.3);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: #00bfff;
+            border: 2px solid #00bfff;
+        }
+
+        .btn-outline:hover {
+            background: #00bfff;
+            color: #0a0a12;
+            box-shadow: 0 4px 16px rgba(0, 191, 255, 0.2);
+        }
+
+        .btn-sm {
+            padding: 6px 18px;
+            font-size: 0.8rem;
+        }
+
+        .cta-box {
+            background: #111125;
+            border-radius: 16px;
+            padding: 30px;
+            margin: 40px 0 20px;
+            text-align: center;
+            border: 1px solid #1d1d3a;
+        }
+
+        .cta-box p {
+            margin-bottom: 16px;
+        }
+
+        /* ---------- FOOTER ---------- */
+        .footer {
+            background: #0a0a16;
+            border-top: 1px solid #1a1a30;
+            padding: 32px 0 24px;
+            margin-top: 24px;
+            text-align: center;
+        }
+
+        .footer .links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px 20px;
+            margin-bottom: 20px;
+        }
+
+        .footer .copy {
+            color: #5a6a80;
+            font-size: 0.9rem;
+            letter-spacing: 0.3px;
+        }
+
+        /* ---------- RESPONSIVE ---------- */
+        @media (max-width: 700px) {
+            .navbar .container {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .nav-links {
+                justify-content: center;
+            }
+            .terms-header h1 {
+                font-size: 2rem;
+            }
+            #copyrightBanner .banner-text {
+                font-size: 0.8rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .brand h1 {
+                font-size: 1.3rem;
+            }
+            .btn {
+                padding: 10px 24px;
+                font-size: 0.9rem;
+            }
+            #copyrightBanner {
+                padding: 6px 16px;
+                flex-wrap: wrap;
+                gap: 4px;
+            }
+        }
+    </style>
 </head>
 <body>
 
-<header>Ultron™ - Terms of Service</header>
+    <!-- ========== STICKY COPYRIGHT BANNER ========== -->
+    <div id="copyrightBanner">
+        <span class="banner-text">
+            <strong>© 2026 Ultron™</strong> · All rights reserved.
+        </span>
+        <button class="close-btn" id="closeBannerBtn" aria-label="Close banner">&times;</button>
+    </div>
 
-<main>
-  <h2>Welcome to Ultron™</h2>
-  <p>Thank you for using Ultron™, your ultimate Discord bot companion packed with tons of features. Before interacting with Ultron™, please read these Terms of Service carefully.</p>
+    <!-- ========== NAVBAR ========== -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="brand">
+                <img src="https://cdn.discordapp.com/avatars/1450801405572153446/da7bf9a99800e445d4f15fe1743afe4c.png?size=1024" alt="Ultron bot icon" />
+                <h1>Ultron™</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="https://mythickiller-ai.github.io/Ultron.bot.website/">Home</a></li>
+                <li><a href="https://mythickiller-ai.github.io/Ultron.bot.Privacy.Policy/">Privacy</a></li>
+                <li><a href="https://discord.gg/bW9kNuqdft">Support</a></li>
+            </ul>
+        </div>
+    </nav>
 
-  <h2>1. Acceptance of Terms</h2>
-  <p>By using Ultron™, you agree to comply with these terms. If you do not agree, please do not use the bot.</p>
+    <!-- ========== TERMS HEADER ========== -->
+    <section class="terms-header">
+        <div class="container">
+            <h1>Terms of Service</h1>
+            <p>Effective as of January 1, 2026</p>
+        </div>
+    </section>
 
-  <h2>2. Features & Usage</h2>
-  <ul>
-    <li>Commands and features may be updated or removed at any time.</li>
-    <li>You must not misuse or abuse the bot.</li>
-    <li>Respect Discord's Terms of Service while using Ultron™.</li>
-  </ul>
+    <!-- ========== TERMS CONTENT ========== -->
+    <section class="terms-content">
+        <div class="container">
+            <h2>Welcome to Ultron™</h2>
+            <p>
+                Thank you for using Ultron™, your ultimate Discord bot companion packed with tons of features.
+                Before interacting with Ultron™, please read these Terms of Service carefully.
+                By using Ultron™, you agree to be bound by these terms. If you do not agree, please do not use the bot.
+            </p>
 
-  <h2>3. Privacy</h2>
-  <p>Ultron™ may collect minimal data required to operate features effectively. Your data will not be shared with third parties without consent.</p>
+            <h2>1. Acceptance of Terms</h2>
+            <p>
+                By using Ultron™, you agree to comply with these terms and any future updates.
+                The developers reserve the right to modify these terms at any time.
+                Your continued use of the bot constitutes acceptance of the updated terms.
+            </p>
 
-  <h2>4. Liability</h2>
-  <p>Ultron™ is provided "as-is". The creators are not responsible for any damage, loss, or inconvenience caused by using the bot.</p>
+            <h2>2. Features &amp; Usage</h2>
+            <ul>
+                <li>Commands and features may be updated, modified, or removed at any time without prior notice.</li>
+                <li>You must not misuse or abuse the bot, including but not limited to spamming commands, exploiting bugs, or attempting to harm the bot or its users.</li>
+                <li>You must respect Discord's Terms of Service and Community Guidelines while using Ultron™.</li>
+                <li>The bot is provided for personal and community use. Commercial redistribution or resale is prohibited.</li>
+            </ul>
 
-  <h2>5. Support</h2>
-  <p>If you need help or want to report a bug, join our support server:</p>
-  <a href="https://discord.gg/XRxzpEvZxd" target="_blank">Click here to join the Support Server</a>
-</main>
+            <h2>3. Privacy</h2>
+            <p>
+                Ultron™ may collect minimal data required to operate features effectively (e.g., user IDs, message content for moderation logs).
+                Your data will not be shared with third parties without your explicit consent, except as required by law.
+                For more details, please refer to our <a href="https://mythickiller-ai.github.io/Ultron.bot.Privacy.Policy/">Privacy Policy</a>.
+            </p>
 
-<footer>
-  &copy; 2025 Ultron™. All rights reserved.
-</footer>
+            <h2>4. Liability &amp; Disclaimer</h2>
+            <p>
+                Ultron™ is provided "as‑is" without any warranties of any kind, express or implied.
+                The creators are not responsible for any damage, loss, or inconvenience caused by using the bot,
+                including but not limited to data loss, server issues, or unintended actions performed by the bot.
+                You use the bot at your own risk.
+            </p>
+
+            <h2>5. Intellectual Property</h2>
+            <p>
+                All content, branding, and code associated with Ultron™ are the exclusive property of the developer.
+                You may not copy, modify, or redistribute the bot's code without explicit permission.
+                The name "Ultron™" and the bot's icon are trademarked and may not be used without authorization.
+            </p>
+
+            <h2>6. Termination</h2>
+            <p>
+                We reserve the right to suspend or terminate your access to Ultron™ at any time, with or without cause,
+                if we believe you have violated these terms or acted in a way that harms the bot or other users.
+            </p>
+
+            <h2>7. Contact &amp; Support</h2>
+            <p>
+                If you have questions, need help, or want to report a bug, please join our official support server.
+                Our team is ready to assist you.
+            </p>
+
+            <div class="cta-box">
+                <p style="font-size: 1.1rem;">Need help or want to report an issue?</p>
+                <a href="https://discord.gg/bW9kNuqdft" target="_blank" class="btn">
+                    Join Support Server
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="links">
+                <a href="https://mythickiller-ai.github.io/Ultron.bot.Privacy.Policy/" target="_blank" class="btn btn-outline btn-sm">Privacy Policy</a>
+                <a href="https://mythickiller-ai.github.io/Ultron.terms.services.xyz/" target="_blank" class="btn btn-outline btn-sm">Terms of Service</a>
+                <a href="https://discord.gg/bW9kNuqdft" target="_blank" class="btn btn-outline btn-sm">Support</a>
+                <a href="https://mythickiller-ai.github.io/Mr.Mythic_killer/" target="_blank" class="btn btn-outline btn-sm">Developer</a>
+            </div>
+            <div class="copy">
+                &copy; 2026 Ultron™. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========== JAVASCRIPT FOR BANNER ========== -->
+    <script>
+        (function() {
+            const banner = document.getElementById('copyrightBanner');
+            const closeBtn = document.getElementById('closeBannerBtn');
+            const BANNER_KEY = 'ultronBannerClosed';
+
+            if (localStorage.getItem(BANNER_KEY) === 'true') {
+                banner.style.display = 'none';
+            }
+
+            closeBtn.addEventListener('click', function() {
+                banner.style.display = 'none';
+                localStorage.setItem(BANNER_KEY, 'true');
+            });
+        })();
+    </script>
 
 </body>
 </html>
-
